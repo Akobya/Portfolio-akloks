@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1c2526 100%);
+      color: #e0e0e0;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    .glow {
+      box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Reduced shadow */
+    }
+    .neon-text {
+      text-shadow: 0 0 3px rgba(0, 255, 255, 0.7); /* Subtler neon effect */
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .skill-card:hover, .project-card:hover, .cert-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.3); /* Minimal hover shadow */
+    }
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    /* Hamburger Menu Icon */
+    #menu-toggle {
+      display: none;
+    }
+    #menu-icon {
+      display: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    #menu-icon:hover {
+      transform: scale(1.2);
+    }
+    @media (max-width: 640px) {
+      #menu-icon {
+        display: block;
+      }
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.9);
+        padding: 1rem;
+      }
+      #menu-toggle:checked ~ #nav-links {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body class="smooth-scroll">
+  <!-- Particle Background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-10 glass">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold neon-text">
+        <img src="https://via.placeholder.com/50" alt="Logo" class="inline-block h-10 rounded-full glow">
+        Portfolio
+      </div>
+      <input type="checkbox" id="menu-toggle" class="hidden">
+      <label for="menu-toggle" id="menu-icon" class="sm:hidden">
+        <svg class="w-8 h-8 text-cyan-300 glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <ul id="nav-links" class="flex space-x-6 sm:flex sm:space-x-6">
+        <li><a href="#home" class="text-gray-300 hover:text-cyan-300 neon-text transition">Home</a></li>
+        <li><a href="#projects" class="text-gray-300 hover:text-cyan-300 neon-text transition">Projects</a></li>
+        <li><a href="#certificates" class="text-gray-300 hover:text-cyan-300 neon-text transition">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section id="home" class="pt-24 pb-12">
+    <div class="container mx-auto px-4 flex flex-col items-center text-center">
+      <img src="image/ake.jpg" alt="Profile Picture" class="rounded-full w-32 h-32 sm:w-40 sm:h-40 mb-4 glow border-4 border-cyan-500">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-2 neon-text">AKLOK .T</h1>
+      <p class="text-base sm:text-lg max-w-2xl px-2">
+        A visionary web developer crafting futuristic, responsive applications with cutting-edge tech.by using css html js and react js
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 neon-text">Skills</h2>
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
+          <i class="fa-brands fa-html5 text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
+          <p class="font-semibold text-sm sm:text-base">HTML</p>
+        </div>
+        <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
+          <i class="fa-brands fa-css3-alt text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
+          <p class="font-semibold text-sm sm:text-base">CSS</p>
+        </div>
+        <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
+          <i class="fa-brands fa-js text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
+          <p class="font-semibold text-sm sm:text-base">JavaScript</p>
+        </div>
+        <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
+          <i class="fa-brands fa-react text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
+          <p class="font-semibold text-sm sm:text-base">React</p>
+        </div>
+        <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
+          <i class="fa-brands fa-node text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
+          <p class="font-semibold text-sm sm:text-base">Next.js</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 neon-text">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass project-card rounded-lg overflow-hidden transition duration-300">
+          <img src="image/Project1.jpg" alt="Project 1" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">Project 1</h3>
+            <p class="text-gray-300 mb-4 text-sm sm:text-base">A futuristic web app by css js.</p>
+            <a href="https://akobya.github.io/Need/" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 neon-text">Certificates</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
+          <img src="image/fundamental.jpg" alt="Certificate 1" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">Web Development</h3>
+            <p class="text-gray-300 mb-4 text-sm sm:text-base">Certified fundamental programming</p>
+            <a href="#" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
+          </div>
+        </div>
+        <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
+          <img src="image/20projects.jpg" alt="Certificate 2" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4>20 project js</p>
+            <a href="#" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
+          </div>
+        </div>
+        <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
+          <img src="image/deploma.jpg" alt="Certificate 3" class="w-full h-40 sm:h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">Next.js Essentials</h3>
+            <p class="text-gray-300 mb-4 text-sm sm:text-base">Certified proffestionsl Deploma js.</p>
+            <a href="#" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Social Links -->
+  <footer class="py-8 glass">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-xl sm:text-2xl font-bold mb-4 neon-text">Connect with Me</h2>
+      <div class="flex justify-center space-x-6">
+        <a href="https://t.me/akobyalogo" target="_blank" class="text-cyan-300 hover:text-cyan-500 transition">
+          <i class="fa-brands fa-telegram text-3xl sm:text-4xl neon-text"></i>
+        </a>
+        <a href="https://github.com/akobya" target="_blank" class="text-cyan-300 hover:text-cyan-500 transition">
+          <i class="fa-brands fa-github text-3xl sm:text-4xl neon-text"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Smooth Scrolling and Particles -->
+  <script>
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Particle Background
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const particleCount = window.innerWidth < 640 ? 50 : 100; // Reduce particles on mobile
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.fillStyle = 'rgba(0, 255, 255, 0.5)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function init() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
