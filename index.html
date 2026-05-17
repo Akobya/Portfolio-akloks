@@ -19,10 +19,10 @@
       scroll-behavior: smooth;
     }
     .glow {
-      box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Reduced shadow */
+      box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
     }
     .neon-text {
-      text-shadow: 0 0 3px rgba(0, 255, 255, 0.7); /* Subtler neon effect */
+      text-shadow: 0 0 3px rgba(0, 255, 255, 0.7);
     }
     .glass {
       background: rgba(255, 255, 255, 0.1);
@@ -31,7 +31,7 @@
     }
     .skill-card:hover, .project-card:hover, .cert-card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 8px rgba(0, 255, 255, 0.3); /* Minimal hover shadow */
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
     }
     #particles {
       position: fixed;
@@ -41,7 +41,6 @@
       height: 100%;
       z-index: -1;
     }
-    /* Hamburger Menu Icon */
     #menu-toggle {
       display: none;
     }
@@ -70,10 +69,9 @@
       #menu-toggle:checked ~ #nav-links {
         display: flex;
       }
-      
     }
-    #img-conts img{
-      color:white;
+    #img-conts img {
+      color: white;
     }
   </style>
 </head>
@@ -96,7 +94,7 @@
       </label>
       <ul id="nav-links" class="flex space-x-6 sm:flex sm:space-x-6">
         <li><a href="#home" class="text-gray-300 hover:text-cyan-300 neon-text transition">Home</a></li>
-        <li><a href="#skills" class="text-gray-300 hover:text-cyan-300 neon-text transition">skills</a></li>
+        <li><a href="#skills" class="text-gray-300 hover:text-cyan-300 neon-text transition">Skills</a></li>
         <li><a href="#projects" class="text-gray-300 hover:text-cyan-300 neon-text transition">Projects</a></li>
         <li><a href="#certificates" class="text-gray-300 hover:text-cyan-300 neon-text transition">Certificates</a></li>
       </ul>
@@ -109,7 +107,7 @@
       <img src="/Portfolio-akloks/ake.jpg" alt="Profile Picture" class="rounded-full w-32 h-32 sm:w-40 sm:h-40 mb-4 glow border-4 border-cyan-500">
       <h1 class="text-3xl sm:text-4xl font-bold mb-2 neon-text">AKLOK .T</h1>
       <p class="text-base sm:text-lg max-w-2xl px-2">
-        A visionary web developer crafting futuristic, responsive applications with cutting-edge tech.by using css html js and react js
+        A visionary web and mobile developer crafting futuristic, responsive applications with cutting-edge tech like React, React Native, and Laravel.
       </p>
     </div>
   </section>
@@ -121,23 +119,27 @@
       <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
         <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
           <i class="fa-brands fa-html5 text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
-          <p class="font-semibold text-sm sm:text-base">HTML</p>
+          <p class="font-semibold text-xs sm:text-sm">HTML</p>
         </div>
         <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
           <i class="fa-brands fa-css3-alt text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
-          <p class="font-semibold text-sm sm:text-base">CSS</p>
+          <p class="font-semibold text-xs sm:text-sm">CSS</p>
         </div>
         <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
           <i class="fa-brands fa-js text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
-          <p class="font-semibold text-sm sm:text-base">JS</p>
+          <p class="font-semibold text-xs sm:text-sm">JS</p>
         </div>
         <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
           <i class="fa-brands fa-react text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
-          <p class="font-semibold text-sm sm:text-base">React</p>
+          <p class="font-semibold text-xs sm:text-sm">React</p>
+        </div>
+        <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
+          <i class="fa-brands fa-react text-4xl sm:text-5xl text-cyan-300 mb-2 animate-pulse"></i>
+          <p class="font-semibold text-xs sm:text-sm">React Native</p>
         </div>
         <div class="glass skill-card rounded-lg p-4 w-24 sm:w-32 text-center transition duration-300">
           <i class="fa-brands fa-node text-4xl sm:text-5xl text-cyan-300 mb-2"></i>
-          <p class="font-semibold text-sm sm:text-base">Next.js</p>
+          <p class="font-semibold text-xs sm:text-sm">Next.js</p>
         </div>
       </div>
     </div>
@@ -155,7 +157,6 @@
             <p class="text-gray-300 mb-4 text-sm sm:text-base">A futuristic web quiz-game by html css js.</p>
             <a href="https://akobya.github.io/Need/" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
           </div>
-       
         </div>
       </div>
     </div>
@@ -166,6 +167,7 @@
     <div class="container mx-auto px-4">
       <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 neon-text">Certificates</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Certificate 1 -->
         <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
           <img src="/Portfolio-akloks/fundamental.jpg" alt="Certificate 1" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4">
@@ -174,6 +176,7 @@
             <a href="fundamental.pdf" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
           </div>
         </div>
+        <!-- Certificate 2 -->
         <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
           <img src="/Portfolio-akloks/20projects.jpg" alt="Certificate 2" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4">
@@ -182,24 +185,24 @@
             <a href="20JavaScript.pdf" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
           </div>
         </div>
-   
-          <img src="/Portfolio-akloks/20projects.jpg" alt="Certificate 2" class="w-full h-40 sm:h-48 object-cover">
+        <!-- Certificate 3 (IT Essentials) -->
+        <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
+          <img src="it_essenstial.png" alt="IT Essentials Certificate" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4">
-            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">Web Development</h3>
-            <p class="text-gray-300 mb-4 text-sm sm:text-base">Certified 20 js projects</p>
-            <a href="20JavaScript.pdf" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">IT Essentials</h3>
+            <p class="text-gray-300 mb-4 text-sm sm:text-base">Certified IT Essentials professional skills</p>
+            <a href="it_essentienal.pdf" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
           </div>
         </div>
-          
-        </div>
-                <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
-          <img src="deploma.jpg" alt="Certificate 3" class="w-full h-40 sm:h-48 object-cover">
+        <!-- Certificate 4 -->
+        <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
+          <img src="deploma.jpg" alt="Certificate 4" class="w-full h-40 sm:h-48 object-cover">
           <div class="p-4">
-            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">js certified</h3>
-            <p class="text-gray-300 mb-4 text-sm sm:text-base">Certified proffestionsl Deploma js.</p>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2 neon-text">JS Certified</h3>
+            <p class="text-gray-300 mb-4 text-sm sm:text-base">Certified professional Diploma JS.</p>
             <a href="deploma.jpg" class="text-cyan-300 hover:text-cyan-500 neon-text text-sm sm:text-base">View More</a>
           </div>
-           <div class="glass cert-card rounded-lg overflow-hidden transition duration-300">
+        </div>
       </div>
     </div>
   </section>
@@ -221,7 +224,6 @@
 
   <!-- JavaScript for Smooth Scrolling and Particles -->
   <script>
-    // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -231,14 +233,13 @@
       });
     });
 
-    // Particle Background
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const particleCount = window.innerWidth < 640 ? 50 : 100; // Reduce particles on mobile
+    const particleCount = window.innerWidth < 640 ? 50 : 100;
 
     class Particle {
       constructor() {
